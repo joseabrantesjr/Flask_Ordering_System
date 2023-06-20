@@ -1,0 +1,13 @@
+<!-- encerramento.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lanchonete - Encerramento</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1 class="title">Encerramento do Pedido</h1>
+    <h2 class="subtitle">Valor Final: R$ {{ "{:,.2f}".format(valor_final).replace(",", ".") }}</h2>
+    <p class="message">Obrigado pelo seu pedido!</p>
+</body>
+</html>

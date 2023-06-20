@@ -1,0 +1,24 @@
+<!-- checkout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lanchonete - Checkout</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1 class="title">Checkout</h1>
+    <h2 class="subtitle">Valor Total: R$ {{ "{:,.2f}".format(valor_total).replace(",", ".") }}</h2>
+
+    <h2 class="subtitle">Pedido</h2>
+    <ul class="checkout-list">
+        {% for item in pedido %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <form method="post" action="/checkout">
+        <input type="submit" name="submit_button" value="Voltar" class="submit-button">
+        <input type="submit" name="submit_button" value="Encerrar" class="submit-button">
+    </form>
+</body>
+</html>

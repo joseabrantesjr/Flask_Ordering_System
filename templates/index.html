@@ -1,0 +1,43 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lanchonete</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h1 class="title">Bem-vindos à Lanchonete do Jose Calazans Abrantes Junior</h1>
+
+    <h2 class="subtitle">Cardápio</h2>
+    <table class="menu-table">
+        <tr>
+            <th>Código</th>
+            <th>Descrição</th>
+            <th>Valor </th>
+        </tr>
+        {% for codigo, produto in produtos.items() %}
+        <tr>
+            <td>{{ codigo }}</td>
+            <td>{{ produto.descricao }}</td>
+            <td>{{ 'R$ '"{:,.2f}".format(produto.valor).replace(",", ".") }} </td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2 class="subtitle">Realizar Pedido</h2>
+    {% if mensagem %}
+    <p class="message">{{ mensagem }}</p>
+    {% endif %}
+    <form method="post" action="/">
+        <label for="codigo">Digite o código do produto desejado:</label>
+        <input type="number" name="codigo" required>
+        <input type="submit" value="Adicionar ao Pedido" class="submit-button">
+    </form>
+
+    <form method="post" action="/checkout">
+        <input type="submit" value="Continuar para Checkout" class="submit-button">
+    </form>
+</body>
+</html>
