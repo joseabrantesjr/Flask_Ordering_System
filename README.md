@@ -22,13 +22,14 @@ Certifique-se de ter os seguintes requisitos instalados em seu ambiente de desen
 3. Crie um ambiente virtual (opcional, mas recomendado) e ative-o:
 
    `python3 -m venv venv`
+   
    `source venv/bin/activate`
 
-4. Instale as dependências do projeto:
+5. Instale as dependências do projeto:
 
    `pip install -r requirements.txt`
 
-5. Configure as variáveis de ambiente:
+6. Configure as variáveis de ambiente:
 Crie um arquivo .env no diretório raiz do projeto
 Defina as seguintes variáveis no arquivo .env:
 
