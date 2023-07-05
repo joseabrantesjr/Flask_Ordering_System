@@ -1,55 +1,55 @@
-# Sistema de Lanchonete
+# Cafeteria System
 
-Um sistema web desenvolvido com Flask em Python que permite aos usuários visualizar o cardápio da lanchonete, selecionar produtos pelo código e adicionar ao pedido.
+A web system developed with Flask in Python that allows users to view the cafeteria menu, select products by code and add to the order.
 
-## Requisitos
+## Requirements
 
-Certifique-se de ter os seguintes requisitos instalados em seu ambiente de desenvolvimento:
+Make sure you have the following requirements installed in your development environment:
 
 - Python 3.x
 - Flask (instalável via `pip install flask`)
 
-## Instalação
+# Installation
 
-1. Clone o repositório para o seu ambiente local:
+1. Clone the repository to your local environment:
 
    `git clone https://github.com/joseabrantesjr/PedidosLanchonete.git`
 
-2. Acesse o diretório do projeto:
-
+2. Access the project directory:
+   
    `cd PedidosLanchonete`
 
-3. Crie um ambiente virtual (opcional, mas recomendado) e ative-o:
-
+3. Create a virtual environment (optional but recommended) and activate it:
+   
    `python3 -m venv venv`
    
    `source venv/bin/activate`
 
-5. Instale as dependências do projeto:
-
+4. Install the project's dependencies:
+   
    `pip install -r requirements.txt`
 
-6. Configure as variáveis de ambiente:
-Crie um arquivo .env no diretório raiz do projeto
-Defina as seguintes variáveis no arquivo .env:
+5. Configure the environment variables:
+Create an .env file in the project's root directory
+Define the following variables in the .env file:
 
-`FLASK_APP=app.py`
+   `FLASK_APP=app.py`
 
-`FLASK_ENV=development`
+   `FLASK_ENV=development`
 
-6. Execute a aplicação:
-
+6. Run the application:
+   
    `flask run`
 
-7. Acesse a aplicação em seu navegador web no seguinte endereço:
-
+7. Access the application in your web browser at the following address:
+   
     `http://localhost:5000`
 
-Uso
+To use
 
-Ao acessar a aplicação, você verá o cardápio da lanchonete com os produtos disponíveis e seus respectivos códigos.
-Digite o código do produto desejado na caixa de seleção e clique em "Adicionar ao Pedido" para adicionar o produto ao pedido atual.
-O pedido será exibido abaixo do cardápio, mostrando os produtos selecionados e o total a pagar.
-Contribuição
+When accessing the application, you will see the cafeteria menu with the available products and their respective codes.
+Enter the desired product code in the selection box and click "Add to Order" to add the product to the current order.
+The order will be displayed below the menu, showing the selected products and the total amount to be paid.
+Contribution
 
-Contribuições são bem-vindas! Se você quiser contribuir para este projeto, siga as diretrizes de contribuição e envie uma solicitação de pull. Para relatar problemas ou fazer sugestões, abra uma issue.
+Contributions are welcome! If you would like to contribute to this project, please follow the contribution guidelines and submit a request to receive it. To report issues or make suggestions, open an issue.
